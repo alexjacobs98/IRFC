@@ -1,0 +1,97 @@
+@import './assets/scss/globals/variables.scss';
+@import './assets/scss/globals/mixins.scss';
+
+.login-page-wrapper{
+  overflow: hidden;
+  max-height: 100vh;
+  .login-video-overlay{
+    @include cover-all;
+    background-color: $background-dark;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .login-background-video{
+    min-height: 120vh;
+    min-width: 120vw;
+    margin-top: -75px;
+    overflow: hidden;
+  }
+
+  .login-container{
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    @include cover-all;
+    .fluid-container{
+      @include cover-all;
+      .row{
+        text-align: center;
+        @include cover-all;
+        .login-form-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          min-width: 500px;
+          border-radius: 5px;
+          .logo-container{
+            text-align: center;
+            .img{
+              height: 200px;
+            }
+          }
+          background-color: $background-darker;
+          margin: auto;
+          padding: 0;
+          height: 70%;
+          .login-form{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            .login-input{
+              @include login-input;
+              margin: 10px 0;
+              font-size: 20px;
+            }
+            button{
+              background-color: $dark-yellow;
+            }
+          }
+          .login-helpers{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            a{
+              color: $dark-yellow;
+              text-align: center;
+              font-family: $body-font;
+              width: 100%;
+              margin: 10px 0;
+              font-size: 20px;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 992px) {
+  .login-background-video{
+    display: none;
+  }
+  .login-video-overlay{
+    display: none;
+  }
+  .login-container{
+    background-color: $background-darker;
+    width: 100vw;
+  }
+}

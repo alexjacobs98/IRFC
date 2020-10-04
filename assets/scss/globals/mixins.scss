@@ -1,0 +1,13 @@
+@mixin cover-all{
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin login-input{
+  width: 80%;
+  height: 50px;
+  border: 0;
+  padding: 0 15px;
+  outline: 0;
+  font-family: 'Oswald', sans-serif;
+}
