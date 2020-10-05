@@ -1,78 +1,77 @@
-@import './assets/scss/globals/variables.scss';
 @import './assets/scss/globals/mixins.scss';
+@import './assets/scss/globals/variables.scss';
 
-.login-page-wrapper{
+.login-wrapper{
+  background-color: $background-darker;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
-  max-height: 100vh;
-  .login-video-overlay{
-    @include cover-all;
-    background-color: $background-dark;
-    opacity: 0.4;
-    position: absolute;
-    z-index: 2;
+  .video-container{
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
-  }
-  .login-background-video{
-    min-height: 120vh;
-    min-width: 120vw;
-    margin-top: -75px;
-    overflow: hidden;
+    video{
+      min-width: 100%;
+      min-height: 145vh;
+      margin-top: -200px;
+    }
   }
 
-  .login-container{
-    z-index: 4;
+  .video-overlay{
+    height: 100vh;
+    width: 100vw;
+    background-color: $background-darker;
     position: absolute;
     top: 0;
+    opacity: 0.6;
+  }
+  .form-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
-    @include cover-all;
-    .fluid-container{
-      @include cover-all;
-      .row{
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+
+
+    .row{
+      margin: auto 0;
+      padding: 0;
+      width: 100%;
+      .login-form{
+        width: 100%;
+        height: 70vh;
+        margin: 15vh auto;
+        background-color: $background-darker;
         text-align: center;
-        @include cover-all;
-        .login-form-container{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        .logo-container{
+          margin: 20px 0;
+          img{
+
+          }
+        }
+        input{
+          @include login-input;
+        }
+        button{
+          @include login-input;
+          background-color: $dark-yellow;
+        }
+        .helper-links{
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
-          min-width: 500px;
-          border-radius: 5px;
-          .logo-container{
-            text-align: center;
-            .img{
-              height: 200px;
-            }
-          }
-          background-color: $background-darker;
-          margin: auto;
-          padding: 0;
-          height: 70%;
-          .login-form{
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            .login-input{
-              @include login-input;
-              margin: 10px 0;
-              font-size: 20px;
-            }
-            button{
-              background-color: $dark-yellow;
-            }
-          }
-          .login-helpers{
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            a{
-              color: $dark-yellow;
-              text-align: center;
-              font-family: $body-font;
-              width: 100%;
-              margin: 10px 0;
-              font-size: 20px;
-              &:hover{
-                text-decoration: none;
-              }
+          padding: 15px;
+          a{
+            color: $dark-yellow;
+            margin:5px;
+            &:hover{
+              text-decoration: none;
             }
           }
         }
@@ -80,18 +79,25 @@
     }
   }
 }
-
-
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 992px) {
-  .login-background-video{
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px){
+  .video-container{
     display: none;
   }
-  .login-video-overlay{
+  .video-overlay{
     display: none;
   }
-  .login-container{
-    background-color: $background-darker;
-    width: 100vw;
+  .form-container{
+    height: 100vh;
+
+    .row{
+      padding: 0;
+
+      .login-form{
+        background-color: $background-darker;
+        min-height: 100vh;
+        margin: 0 auto !important;
+      }
+    }
   }
 }

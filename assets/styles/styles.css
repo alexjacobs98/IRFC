@@ -41,88 +41,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.login-page-wrapper {
-  overflow: hidden;
-  max-height: 100vh; }
-  .login-page-wrapper .login-video-overlay {
-    height: 100vh;
-    width: 100vw;
-    background-color: #353b48;
-    opacity: 0.4;
-    position: absolute;
-    z-index: 2;
-    overflow: hidden; }
-  .login-page-wrapper .login-background-video {
-    min-height: 120vh;
-    min-width: 120vw;
-    margin-top: -75px;
-    overflow: hidden; }
-  .login-page-wrapper .login-container {
-    z-index: 4;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw; }
-    .login-page-wrapper .login-container .fluid-container {
-      height: 100vh;
-      width: 100vw; }
-      .login-page-wrapper .login-container .fluid-container .row {
-        text-align: center;
-        height: 100vh;
-        width: 100vw; }
-        .login-page-wrapper .login-container .fluid-container .row .login-form-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          min-width: 500px;
-          border-radius: 5px;
-          background-color: #2f3640;
-          margin: auto;
-          padding: 0;
-          height: 70%; }
-          .login-page-wrapper .login-container .fluid-container .row .login-form-container .logo-container {
-            text-align: center; }
-            .login-page-wrapper .login-container .fluid-container .row .login-form-container .logo-container .img {
-              height: 200px; }
-          .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-form {
-            margin: 0;
-            padding: 0;
-            text-align: center; }
-            .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-form .login-input {
-              width: 80%;
-              height: 50px;
-              border: 0;
-              padding: 0 15px;
-              outline: 0;
-              font-family: 'Oswald', sans-serif;
-              margin: 10px 0;
-              font-size: 20px; }
-            .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-form button {
-              background-color: #e1b12c; }
-          .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-helpers {
-            text-align: center;
-            display: flex;
-            flex-direction: column; }
-            .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-helpers a {
-              color: #e1b12c;
-              text-align: center;
-              font-family: Oswald;
-              width: 100%;
-              margin: 10px 0;
-              font-size: 20px; }
-              .login-page-wrapper .login-container .fluid-container .row .login-form-container .login-helpers a:hover {
-                text-decoration: none; }
-
-@media (max-width: 992px) {
-  .login-background-video {
-    display: none; }
-  .login-video-overlay {
-    display: none; }
-  .login-container {
-    background-color: #2f3640;
-    width: 100vw; } }
-
 .row {
   margin: 0;
   padding: 0; }
@@ -131,37 +49,86 @@ table {
   margin: 0;
   padding: 0; }
 
-@media screen and (max-width: 768px) {
-  .register-form {
-    background-color: #2f3640;
-    height: 80vh;
-    background-color: red; } }
-
-.register-form-container {
+.login-wrapper {
   background-color: #2f3640;
-  margin: auto;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center; }
-  .register-form-container .logo-container {
-    height: 250px;
-    width: 100%; }
-  .register-form-container .register-form {
+  width: 100%;
+  overflow: hidden; }
+  .login-wrapper .video-container {
     height: 100vh;
+    width: 100vw;
+    overflow: hidden; }
+    .login-wrapper .video-container video {
+      min-width: 100%;
+      min-height: 145vh;
+      margin-top: -200px; }
+  .login-wrapper .video-overlay {
+    height: 100vh;
+    width: 100vw;
     background-color: #2f3640;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    margin: auto 0; }
-    .register-form-container .register-form .Register-input {
-      width: 80%;
-      height: 50px;
-      border: 0;
-      padding: 0 15px;
-      outline: 0;
-      font-family: 'Oswald', sans-serif;
-      margin: auto; }
-  .register-form-container button {
-    background-color: #e1b12c; }
+    position: absolute;
+    top: 0;
+    opacity: 0.6; }
+  .login-wrapper .form-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    top: 0;
+    padding: 0;
+    margin: 0; }
+    .login-wrapper .form-container .row {
+      margin: auto 0;
+      padding: 0;
+      width: 100%; }
+      .login-wrapper .form-container .row .login-form {
+        width: 100%;
+        height: 70vh;
+        margin: 15vh auto;
+        background-color: #2f3640;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column; }
+        .login-wrapper .form-container .row .login-form .logo-container {
+          margin: 20px 0; }
+        .login-wrapper .form-container .row .login-form input {
+          width: 90%;
+          height: 50px;
+          border: 0;
+          padding: 0 15px;
+          outline: 0;
+          font-family: 'Oswald', sans-serif;
+          margin: 10px auto; }
+        .login-wrapper .form-container .row .login-form button {
+          width: 90%;
+          height: 50px;
+          border: 0;
+          padding: 0 15px;
+          outline: 0;
+          font-family: 'Oswald', sans-serif;
+          margin: 10px auto;
+          background-color: #e1b12c; }
+        .login-wrapper .form-container .row .login-form .helper-links {
+          display: flex;
+          flex-direction: column;
+          padding: 15px; }
+          .login-wrapper .form-container .row .login-form .helper-links a {
+            color: #e1b12c;
+            margin: 5px; }
+            .login-wrapper .form-container .row .login-form .helper-links a:hover {
+              text-decoration: none; }
+
+@media (max-width: 768px) {
+  .video-container {
+    display: none; }
+  .video-overlay {
+    display: none; }
+  .form-container {
+    height: 100vh; }
+    .form-container .row {
+      padding: 0; }
+      .form-container .row .login-form {
+        background-color: #2f3640;
+        min-height: 100vh;
+        margin: 0 auto !important; } }

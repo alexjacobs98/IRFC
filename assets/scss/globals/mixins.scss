@@ -4,10 +4,11 @@
 }
 
 @mixin login-input{
-  width: 80%;
+  width: 90%;
   height: 50px;
   border: 0;
   padding: 0 15px;
   outline: 0;
   font-family: 'Oswald', sans-serif;
+  margin: 10px auto;
 }
