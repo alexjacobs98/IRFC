@@ -28,14 +28,14 @@ if (isset($_POST['login-button'])) {
         if ($check == true) {
           session_start();
           $_SESSION['UserID'] = $row['UserID'];
-          header("Location: ..\..\index.php?Login=success");
+          header("Location: ..\..\index.php?Login=Success");
           exit();
         }else{
-          header("Location: ..\..\index.php?error=NoMatch");
+          header("Location: ..\..\index.php?error=SomethingIsntRight");
           exit();
         }
       }else{
-        header("Location: ..\..\index.php?error=NoMatch");
+        header("Location: ..\..\index.php?error=NotRegistered");
         exit();
       }
 

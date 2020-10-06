@@ -44,10 +44,24 @@
         input{
           @include login-input;
         }
-        button{
+        .register-button{
           @include login-input;
           font-size: 25px;
           background-color: $dark-yellow;
+        }
+        .helper-links{
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          a{
+            color: $dark-yellow;
+            margin:5px;
+            font-size: 25px;
+            font-family: Oswald;
+            &:hover{
+              text-decoration: none;
+            }
+          }
         }
       }
     }
