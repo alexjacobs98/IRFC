@@ -88,7 +88,7 @@ table {
       justify-content: space-around; }
       .login-wrapper .form-container .row .login-form {
         margin: auto;
-        padding: 75px 0;
+        padding: 0 0;
         background-color: #2f3640;
         text-align: center;
         justify-content: center;

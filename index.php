@@ -9,7 +9,7 @@
     </div>
     <div class="fluid-container form-container">
       <div class="row ">
-        <form id="login-form" class="login-form col-lg-4 col-md-5" autocomplete="on" action="./dist/includes/signup.inc.php" method="post">
+        <form id="login-form" class="login-form col-lg-4 col-md-5" autocomplete="on" action="./dist/includes/login.inc.php" method="post">
           <div class="logo-container">
             <img src="./dist/images/logo.jpg" alt="IRFC 150 YEAR SPECIAL LOGO">
           </div>
