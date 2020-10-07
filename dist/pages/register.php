@@ -69,7 +69,7 @@
           <input autocomplete="off" type="tel" placeholder="Mobile Number" name="UserNumber" value="">
           <button class="register-button" type="submit" form="register-form" name="register-button">REGISTER</button>
           <div class="helper-links">
-            <a href="..\../index.php">LOGIN</a>
+            <a href="..\../index.php">Login</a>
           </div>
         </form>
       </div>
