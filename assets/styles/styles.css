@@ -49,189 +49,160 @@ table {
   margin: 0;
   padding: 0; }
 
-.login-wrapper {
-  background-color: #2f3640;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
-  .login-wrapper .video-container {
+.login-page-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #353B48; }
+  .login-page-container .video-container video {
+    display: none; }
+  .login-page-container .video-container .video-overlay {
+    display: none; }
+  .login-page-container .video-container .login-form-container {
+    z-index: 3;
+    margin: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center; }
+    .login-page-container .video-container .login-form-container form {
+      border-radius: 5px;
+      padding: 0;
+      box-shadow: 5px 5px rgba(44, 62, 80, 0.3);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #353B48;
+      padding: 0; }
+      .login-page-container .video-container .login-form-container form .logo-container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        overflow: hidden; }
+      .login-page-container .video-container .login-form-container form input {
+        margin: 0;
+        border-style: none;
+        height: 50px;
+        padding: 0 20px;
+        height: 50px;
+        border: 0;
+        padding: 0 15px;
+        outline: 0;
+        border-radius: 0;
+        font-family: 'Oswald', sans-serif;
+        margin: 10px 0px; }
+      .login-page-container .video-container .login-form-container form button {
+        background-color: #E1B12C;
+        height: 50px;
+        border: 0;
+        padding: 0 15px;
+        outline: 0;
+        border-radius: 0;
+        font-family: 'Oswald', sans-serif;
+        margin: 10px 0px;
+        box-shadow: 5px 5px rgba(44, 62, 80, 0.3); }
+      .login-page-container .video-container .login-form-container form .helper-links {
+        display: flex;
+        flex-direction: column; }
+        .login-page-container .video-container .login-form-container form .helper-links a {
+          color: #E1B12C;
+          margin: 5px 0;
+          font-family: 'Roboto', sans-serif; }
+          .login-page-container .video-container .login-form-container form .helper-links a:hover {
+            text-decoration: none; }
+
+@media (min-width: 768px) {
+  .login-page-container .video-container {
     height: 100vh;
     width: 100vw;
     overflow: hidden; }
-    .login-wrapper .video-container video {
-      min-width: 100%;
-      min-height: 145vh;
-      margin-top: -200px; }
-  .login-wrapper .video-overlay {
-    height: 100vh;
-    width: 100vw;
-    background-color: #2f3640;
-    position: absolute;
-    top: 0;
-    opacity: 0.6; }
-  .login-wrapper .form-container {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    top: 0;
-    padding: 0;
-    margin: 0; }
-    .login-wrapper .form-container .row {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-      justify-content: space-around; }
-      .login-wrapper .form-container .row .login-form {
-        margin: auto;
-        padding: 0 0;
-        background-color: #2f3640;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column; }
-        .login-wrapper .form-container .row .login-form .logo-container {
-          margin: 20px 0; }
-        .login-wrapper .form-container .row .login-form input {
-          width: 90%;
-          height: 50px;
-          border: 0;
-          padding: 0 15px;
-          outline: 0;
-          border-radius: 0;
-          font-family: 'Oswald', sans-serif;
-          margin: 10px auto; }
-        .login-wrapper .form-container .row .login-form .login-button {
-          width: 90%;
-          height: 50px;
-          border: 0;
-          padding: 0 15px;
-          outline: 0;
-          border-radius: 0;
-          font-family: 'Oswald', sans-serif;
-          margin: 10px auto;
-          background-color: #e1b12c; }
-        .login-wrapper .form-container .row .login-form .helper-links {
-          display: flex;
-          flex-direction: column;
-          padding: 15px; }
-          .login-wrapper .form-container .row .login-form .helper-links a {
-            color: #e1b12c;
-            margin: 5px;
-            font-family: Oswald; }
-            .login-wrapper .form-container .row .login-form .helper-links a:hover {
-              text-decoration: none; }
+    .login-page-container .video-container video {
+      display: block;
+      min-width: 120vw;
+      min-height: 130vh;
+      margin-top: -75px;
+      z-index: 1; }
+    .login-page-container .video-container .video-overlay {
+      display: block;
+      top: 0%;
+      opacity: 0.5;
+      min-height: 100vh;
+      width: 100vw;
+      position: absolute;
+      background-color: #353B48;
+      z-index: 2; } }
 
-@media (max-width: 768px) {
-  .video-container {
-    display: none; }
-  .video-overlay {
-    display: none; }
-  .form-container {
-    height: 100vh; }
-    .form-container .row {
-      padding: 0; }
-      .form-container .row .login-form {
-        background-color: #2f3640;
-        min-height: 100vh;
-        margin: 0 auto !important; } }
-
-@media (min-width: 768px) {
-  .login-form {
-    min-width: 500px; } }
-
-.register-page-wrapper {
+.menu-page-wrapper {
   height: 100vh;
   width: 100vw;
-  background-color: #2f3640;
-  overflow: hidden; }
-  .register-page-wrapper .fluid-container {
+  background-color: #353B48;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .menu-page-wrapper .burger-menu {
+    position: absolute;
+    height: 50px;
+    width: 70px;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
-    text-align: center; }
-    .register-page-wrapper .fluid-container .row {
-      width: 100%;
-      padding: 0px 0;
-      margin: 0 auto;
-      text-align: center; }
-      .register-page-wrapper .fluid-container .row .register-form {
-        background-color: #2f3640;
-        text-align: center;
-        margin: auto;
-        padding: 75px 0; }
-        .register-page-wrapper .fluid-container .row .register-form h1 {
-          color: #fbc531;
-          text-align: center;
-          width: 100%;
-          font-size: 60px;
-          padding: 0px 0;
-          margin: 0px auto;
-          font-family: Oswald; }
-        .register-page-wrapper .fluid-container .row .register-form h2 {
-          color: #fbc531;
-          text-align: center;
-          width: 100%;
-          font-size: 30px;
-          padding: 0px 0;
-          margin: 0 auto;
-          font-family: Oswald;
-          margin-bottom: 15px; }
-        .register-page-wrapper .fluid-container .row .register-form input {
-          width: 90%;
-          height: 50px;
-          border: 0;
-          padding: 0 15px;
-          outline: 0;
-          border-radius: 0;
-          font-family: 'Oswald', sans-serif;
-          margin: 10px auto; }
-        .register-page-wrapper .fluid-container .row .register-form .register-button {
-          width: 90%;
-          height: 50px;
-          border: 0;
-          padding: 0 15px;
-          outline: 0;
-          border-radius: 0;
-          font-family: 'Oswald', sans-serif;
-          margin: 10px auto;
-          font-size: 25px;
-          background-color: #e1b12c; }
-        .register-page-wrapper .fluid-container .row .register-form .helper-links {
-          display: flex;
-          flex-direction: column;
-          padding: 15px; }
-          .register-page-wrapper .fluid-container .row .register-form .helper-links a {
-            color: #e1b12c;
-            margin: 5px;
-            font-size: 20px;
-            font-family: Oswald; }
-            .register-page-wrapper .fluid-container .row .register-form .helper-links a:hover {
-              text-decoration: none; }
-
-.floater-alert {
-  z-index: 10;
-  width: 95%;
-  margin: 0 2.5%;
-  margin-top: 45vh;
-  padding: 0;
-  text-align: center;
-  position: absolute !important; }
-
-.alert {
-  overflow: hidden;
-  position: absolute !important; }
-
-@media (min-width: 768px) {
-  .floater-alert {
-    z-index: 10;
-    width: 50%;
-    margin: 0 25%;
+    align-content: center; }
+    .menu-page-wrapper .burger-menu:hover {
+      cursor: pointer; }
+    .menu-page-wrapper .burger-menu .menu-bar {
+      height: 5px;
+      background-color: #E1B12C;
+      width: 50px;
+      margin: auto;
+      border-radius: 10px; }
+  .menu-page-wrapper .logo-container {
+    display: flex;
+    justify-content: center; }
+  .menu-page-wrapper .options-container .option {
+    text-align: center;
+    color: #E1B12C;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
     padding: 0;
-    margin-top: 50vh;
-    position: absolute !important; } }
+    margin: 0;
+    padding: 20px 0;
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 10px; }
+    .menu-page-wrapper .options-container .option:hover {
+      cursor: pointer; }
+    .menu-page-wrapper .options-container .option i {
+      font-size: 50px;
+      margin-bottom: 25px; }
+
+@media (min-width: 992px) {
+  .options-container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .options-container .option {
+    max-width: 600px !important;
+    font-size: 50px !important; }
+    .options-container .option i {
+      font-size: 110px !important; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif; }
+
+p {
+  font-family: 'Roboto', sans-serif; }

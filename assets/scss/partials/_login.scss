@@ -1,83 +1,68 @@
-@import './assets/scss/globals/mixins.scss';
-@import './assets/scss/globals/variables.scss';
+@import "../globals/mixins.scss";
 
-.login-wrapper{
-  background-color: $background-darker;
-  height: 100%;
-  width: 100%;
+.login-page-container{
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  background-color:$IrfcBlack;
   .video-container{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     video{
-      min-width: 100%;
-      min-height: 145vh;
-      margin-top: -200px;
+      display: none;
     }
-  }
-
-  .video-overlay{
-    height: 100vh;
-    width: 100vw;
-    background-color: $background-darker;
-    position: absolute;
-    top: 0;
-    opacity: 0.6;
-  }
-  .form-container{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    top: 0;
-    padding: 0;
-    margin: 0;
-
-
-
-    .row{
+    .video-overlay{
+      display: none;
+    }
+    .login-form-container{
+      z-index: 3;
       margin: 0;
-      padding: 0;
-      width: 100%;
+      position: absolute;
       height: 100vh;
+      width: 100vw;
+      top: 0;
       display: flex;
-      text-align: center;
       flex-direction: column;
-      justify-content: space-around;
-
-      .login-form{
-        margin: auto;
-        padding: 0 0;
-        background-color: $background-darker;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      form{
+        border-radius: 5px;
+        padding: 0;
+        @include box-shadow();
         .logo-container{
-          margin: 20px 0;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
           img{
-
           }
         }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color:$IrfcBlack;
+        padding: 0;
+
         input{
-          @include login-input;
+          margin: 0;
+          border-style: none;
+          height: 50px;
+          padding: 0 20px;
+          @include input-reset();
         }
-        .login-button{
-          @include login-input;
-          background-color: $dark-yellow;
+        button{
+          background-color: $IrfcYellow;
+          @include input-reset();
+          @include box-shadow();
         }
         .helper-links{
           display: flex;
           flex-direction: column;
-          padding: 15px;
           a{
-            color: $dark-yellow;
-            margin:5px;
-            font-family: Oswald;
+            color: $IrfcYellow;
+            margin: 5px 0;
+            font-family: 'Roboto', sans-serif;
             &:hover{
-              text-decoration: none;
+              text-decoration:none;
             }
           }
         }
@@ -87,31 +72,45 @@
 }
 
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px){ 
+  
+}
+
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px){
-  .video-container{
-    display: none;
-  }
-  .video-overlay{
-    display: none;
-  }
-  .form-container{
-    height: 100vh;
-
-    .row{
-      padding: 0;
-
-      .login-form{
-        background-color: $background-darker;
+@media (min-width: 768px){ 
+  .login-page-container{
+    .video-container{
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      video{
+        display: block;
+        min-width: 120vw;
+        min-height: 130vh;
+        margin-top: -75px;
+        z-index: 1;
+      }
+      .video-overlay{
+        display: block;
+        top: 0%;
+        opacity: 0.5;
         min-height: 100vh;
-        margin: 0 auto !important;
+        width: 100vw;
+        position: absolute;
+        background-color: $IrfcBlack;
+        z-index: 2;
       }
     }
   }
 }
 
-@media (min-width: 768px){
-  .login-form{
-    min-width: 500px;
-  }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px){
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px){ 
+
 }

@@ -1,4 +1,14 @@
-@import './assets/scss/partials/_reset.scss';
-@import './assets/scss/partials/_login.scss';
-@import './assets/scss/partials/_register.scss';
-@import './assets/scss/globals/globals.scss';
+@import "./partials/_reset.scss";
+@import "./globals/variables.scss";
+@import "./partials/_login.scss";
+@import "./partials/_menu.scss";
+@import "./globals/mixins.scss";
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+

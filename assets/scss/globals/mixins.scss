@@ -1,15 +1,13 @@
-@mixin cover-all{
-  height: 100vh;
-  width: 100vw;
-}
-
-@mixin login-input{
-  width: 90%;
+@mixin input-reset{
   height: 50px;
   border: 0;
   padding: 0 15px;
   outline: 0;
   border-radius: 0;
   font-family: 'Oswald', sans-serif;
-  margin: 10px auto;
+  margin: 10px 0px;
+}
+
+@mixin box-shadow {
+  box-shadow: 5px 5px rgba(44, 62, 80,0.3) ;
 }
