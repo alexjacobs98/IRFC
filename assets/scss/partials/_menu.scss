@@ -1,94 +1,156 @@
-
-.menu-page-wrapper{
+.nav-menu-outer{
+    transition-duration: 300ms;
     height: 100vh;
     width: 100vw;
     background-color: $IrfcBlack;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 98;
+    position: absolute;
+    box-shadow: none;
+    box-shadow: 10px 0px 20px black;
 
-    .burger-menu{
-        position: absolute;
-        height: 50px;
-        width: 70px;
-        top: 0;
-        right: 0;
-        margin-top: 20px;
-        margin-right: 20px;
+    .menu-indicator{
+        display: none;
+    }
+
+    ul{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-content: center;
-        &:hover{
-            cursor: pointer;
-        }
+        width: 100%;
+        height: 60%;
+        
+    
+        
 
-        .menu-bar{
-            height: 5px;
-            background-color: $IrfcYellow;
-            width: 50px;
-            margin: auto;
-            border-radius: 10px;
-        }
-    }
-  
-    .logo-container{
-        display: flex;
-        justify-content: center;
-
-        img{
- 
-        }
-    }
-
-    .options-container{
-        .option{
+        li{
             text-align: center;
-            color: $IrfcYellow;
-            font-family: $HeadingFont ;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 25px;
-            padding: 0;
-            margin: 0;
-            padding: 20px 0;
-            max-width: 300px;
-            margin: 20px auto;
-            border-radius: 10px;
+            margin: auto;
 
-            &:hover{
-                cursor: pointer;
-            }
-
-            i{
-                font-size: 50px;
-                margin-bottom: 25px;
+            a{
+                font-family: $HeadingFont;
+                color: $IrfcYellow;
+                font-size: 25px;
+                
             }
         }
     }
 }
 
+
+
+ .burger-menu{
+     transition-duration: 300ms;
+     position: absolute;
+     height: 50px;
+     width: 70px;
+     top: 0;
+     right: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     margin-top: 25px;
+     margin-right: 25px;
+     z-index: 99;
+     overflow: hidden;
+
+     &:hover{
+         cursor: pointer;
+     }
+     .burger-bar{
+         height: 5px;
+         background-color: $IrfcYellow;
+         width: 50px;
+         margin: auto;
+     }
+     #burger-menu-top{
+         transform-origin:  center;
+         transition-duration: 300ms;
+     }
+     #burger-menu-bottom{
+         transform-origin:center;
+         transition-duration: 300ms;
+     }
+ }
+
+
+
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    .options-container{
-        display: flex;
-        width: 50%;
-        margin: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+@media (min-width: 992px) { 
+
+    .burger-menu{
+        display: none;
     }
 
-    .options-container{
+    .nav-menu-outer{
+        position: absolute;
+        overflow: visible;
+        left: 0;
+        display: block !important;
+        width: 50px;
+        height: 100vh;
+        background-color: $IrfcBlack;
+        transition-duration: 300ms;
+        box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
+        
 
-        .option{
-            max-width: 600px!important;
-            font-size: 50px!important;
-            i{
-                font-size: 110px!important;
+        &:hover{
+            width: 300px;
+            transition-duration: 300ms;
+
+            ul{
+                transition-duration: 300ms;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+               
+                
+            }
+
+            .menu-indicator{
+                left: 250px ;
+                transition-duration: 300ms;
+                transform: rotatez(180deg);
                 
             }
         }
+
+        ul{
+            display: none;
+            height: 40%;
+            padding: 20px 0;
+
+            li{
+                text-align: left !important;
+                width: 70%;
+                padding: 15px 0;
+            }
+        }
+        
+
+        .menu-indicator{
+            display: block;
+            position: absolute;
+            top: 44vh;
+            left: 0;
+            overflow: hidden;
+            margin-left: 10px;
+            transition-duration: 300ms;
+            background-color: $IrfcBlack;
+            border-radius: 100%;
+            border: 3px solid $IrfcBlack;
+            
+            i{
+                font-size: 75px;
+                color: $IrfcYellow;
+                
+            }
+        }
+
+
     }
+
 }
