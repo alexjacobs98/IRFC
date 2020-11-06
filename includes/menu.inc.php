@@ -7,8 +7,7 @@
 <div id="Nav-Menu" class="nav-menu-outer">
     <ul>
         <?php
-         session_start();
-         $_SESSION['User-Role'] = "player-coach";
+         $_SESSION['User-Role'] = "player";
          $role = $_SESSION['User-Role'];
         
          if ($role == "coach"){
@@ -34,9 +33,7 @@
                 <li><a href="">MY REVIEWS</a></li>
              ';
          }
-
          ?>
-       
     </ul>
     <div class="menu-indicator">
         <i class="fas fa-arrow-circle-right"></i>

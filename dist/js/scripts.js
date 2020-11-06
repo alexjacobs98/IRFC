@@ -3,8 +3,20 @@ function MenuToggle(){
     var top = document.getElementById("burger-menu-top");
     var middle = document.getElementById("burger-menu-middle");
     var bottom = document.getElementById("burger-menu-bottom");
-    if (x.style.right === "200vw") {
-        x.style.right = "0";
+    if (x.style.right === "0vw") {
+        x.style.display = "flex";
+        x.style.right = "200vw";
+        top.style.transform = "rotatez(0deg)";
+        bottom.style.transform = "rotatez(0deg)";
+        bottom.style.position = "unset";
+        top.style.position = "unset";
+        middle.style.display = "block";
+      } else {
+        x.style.right = "0vw";
+        top.style.transform = "rotatez(0deg)";
+        middle.style.display = "block";
+        bottom.style.position = "unset";
+        top.style.position = "unset";
         top.style.transform = "rotatez(45deg)";
         middle.style.display = "none";
         bottom.style.position = "absolute";
@@ -14,13 +26,6 @@ function MenuToggle(){
         top.style.top = "25px";
         bottom.style.left = "10px";
         top.style.left = "10px";
-      } else {
-        x.style.right = "200vw";
-        top.style.transform = "rotatez(0deg)";
-        middle.style.display = "block";
-        bottom.style.transform = "rotatez(0deg)";
-        bottom.style.position = "unset";
-        top.style.position = "unset";
       }
 }
 
